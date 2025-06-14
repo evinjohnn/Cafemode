@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.CafeMode" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+        <item name="colorSecondary">@color/secondary_color</item>
+        <item name="android:colorBackground">@color/background_color</item>
+        <item name="colorSurface">@color/surface_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnSecondary">@color/primary_text</item>
+        <item name="colorOnBackground">@color/primary_text</item>
+        <item name="colorOnSurface">@color/primary_text</item>
+    </style>
+
+    <style name="Theme.CafeMode" parent="Base.Theme.CafeMode" />
+</resources>

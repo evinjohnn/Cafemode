@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Café Mode Theme Colors -->
+    <color name="primary_color">#8B4513</color>           <!-- Saddle Brown -->
+    <color name="primary_variant">#5D2E08</color>         <!-- Dark Brown -->
+    <color name="secondary_color">#D2B48C</color>         <!-- Tan -->
+
+    <color name="background_color">#FFF8F0</color>        <!-- Cream -->
+    <color name="surface_color">#FFFFFF</color>           <!-- White -->
+    <color name="card_background">#FEFEFE</color>         <!-- Off White -->
+
+    <color name="primary_text">#2C1810</color>            <!-- Dark Brown Text -->
+    <color name="secondary_text">#6B4423</color>          <!-- Medium Brown Text -->
+
+    <color name="slider_inactive">#E0E0E0</color>         <!-- Light Gray -->
+</resources>

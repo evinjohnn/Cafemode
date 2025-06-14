@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_cafe"
+        android:contentDescription="Café Mode Logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Café Mode"
+        android:textColor="@color/primary_text"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Professional Audio Ambience"
+        android:textColor="@color/secondary_text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/status_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:cardBackgroundColor="@color/card_background"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status: Inactive"
+                android:textColor="@color/primary_text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/toggle_button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:text="Turn On Café Mode"
+                android:textSize="16sp"
+                app:backgroundTint="@color/primary_color"
+                app:cornerRadius="28dp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/controls_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/card_background"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status_card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intensity"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/intensity_slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:value="0.5"
+                android:valueFrom="0.0"
+                android:valueTo="1.0"
+                android:stepSize="0.1"
+                app:thumbColor="@color/primary_color"
+                app:trackColorActive="@color/primary_color"
+                app:trackColorInactive="@color/slider_inactive" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Spatial Width"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/spatial_slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:value="0.5"
+                android:valueFrom="0.0"
+                android:valueTo="1.0"
+                android:stepSize="0.1"
+                app:thumbColor="@color/primary_color"
+                app:trackColorActive="@color/primary_color"
+                app:trackColorInactive="@color/slider_inactive" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/info_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Transforms your music into a distant café ambience, creating the perfect background atmosphere for focus and relaxation."
+        android:textColor="@color/secondary_text"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/controls_card" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
